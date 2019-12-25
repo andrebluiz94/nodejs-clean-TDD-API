@@ -1,5 +1,4 @@
-
 module.exports = {
-  covarageDirectory: 'coverage',
+  coverageDirectory: 'coverage',
   testEnvironment: 'node'
 }
