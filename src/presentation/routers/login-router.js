@@ -19,7 +19,7 @@ module.exports = class LoginRouter {
     if (!acessToken) {
       return HttpResponse.unaunthorizedErro()
     } else {
-      return HttpResponse.ok()
+      return HttpResponse.ok({ acessToken })
     }
   }
 }
