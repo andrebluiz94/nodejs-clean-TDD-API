@@ -1,5 +1,6 @@
 const MissingParamError = require('../helpers/missing-param-error')
 const LoginRouter = require('./login-router')
+const UnaunthorizedError = require('../helpers/unaunthorized-error')
 
 const makeSut = () => {
   class AuthUseCaseSpy {
@@ -75,6 +76,7 @@ describe('Login router', () => {
       }
     }
     const httpResponse = sut.route(httpRequest)
-    expect(httpResponse.statusCode).toBe(401)
+    expect(httpResponse.statusCode).toBe(401) // 401 - usuario não encontrado case/ 403 - usuario não permitido na determinada rota
+    expect(httpResponse.body).toEqual(new UnaunthorizedError())
   })
 })
