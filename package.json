@@ -13,8 +13,9 @@
     "standard": "^14.3.1"
   },
   "scripts": {
-    "test": "jest --watch --silent --noStackTrace",
-    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStrackTrace",
-    "test:ci" : "jest --coverage --noStackTrace --silent"
+    "test": "jest --silent --colors --noStackTrace --passWithNoTests",
+    "test:unit": " npm test -- --watch",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci" : "npm test -- --coverage"
   }
 }
