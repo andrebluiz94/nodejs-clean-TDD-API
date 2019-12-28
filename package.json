@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "jest --watch --silent --noStackTrace",
-    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStrackTrace"
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStrackTrace",
+    "test:ci" : "jest --coverage"
   }
 }
