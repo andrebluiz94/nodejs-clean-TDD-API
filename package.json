@@ -13,7 +13,7 @@
     "standard": "^14.3.1"
   },
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --watch --silent --noStackTrace",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStrackTrace"
   }
 }
