@@ -1,4 +1,4 @@
-const { MissingParamError } = require('../../utils/erros')
+const { MissingParamError } = require('../../presentation/utils/erros')
 class AuthUseCase {
   async auth (email) {
     if (!email) {
